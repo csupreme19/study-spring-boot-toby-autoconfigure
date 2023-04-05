@@ -15,7 +15,7 @@ public class SpringbootAcApplication {
 				"Auto Configured Bean Count = " +
 				report.getConditionAndOutcomesBySource().entrySet().stream()
 				.filter(co -> co.getValue().isFullMatch())
-//				.filter(co -> !co.getKey().toLowerCase().contains("jmx"))
+				.filter(co -> !co.getKey().toLowerCase().contains("jmx"))
 				.map(co -> {
 					System.out.println(co.getKey());
 					co.getValue().forEach(c -> System.out.println("\t" + c.getOutcome() + "\n"));
